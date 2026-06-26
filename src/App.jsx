@@ -13,7 +13,7 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [frameImage, setFrameImage] = useState(null);
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'light';
+    return localStorage.getItem('theme') || 'dark';
   });
 
   useEffect(() => {

@@ -1,7 +1,3 @@
-// Original abstract SVG illustrations themed to each project, built to
-// match the portfolio's dark / orange design system rather than using
-// borrowed screenshots or stock UI kits.
-
 export function RecylytixArt() {
   return (
     <svg viewBox="0 0 400 240" className="project-art" preserveAspectRatio="xMidYMid slice">

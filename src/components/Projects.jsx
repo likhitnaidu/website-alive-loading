@@ -1,13 +1,16 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight, Github } from 'lucide-react';
 import useInView from '../hooks/useInView';
-import { RecylytixArt, MapNavigatorArt, ManabiArt, QrioArt } from './ProjectArt';
+import { MapNavigatorArt } from './ProjectArt';
+import recylytixImg from '../assets/recylytix_placeholder.png';
+import lostFoundImg from '../assets/lost_found_placeholder.png';
+import gestureIdeImg from '../assets/gesture_ide_placeholder.png';
 import './Projects.css';
 
 const PROJECTS = [
   {
     name: 'Recylytix',
-    art: RecylytixArt,
+    art: recylytixImg,
     featured: true,
     desc: 'AI-driven recycling insights platform that helps communities track and improve their recycling habits using machine learning.',
     tags: ['React', 'Open Street Maps', 'Node.js'],
@@ -24,8 +27,8 @@ const PROJECTS = [
     repo: '#',
   },
   {
-    name: 'Lost and Found Portal',
-    art: ManabiArt,
+    name: 'Marupade(Lost and Found Portal)',
+    art: lostFoundImg,
     featured: false,
     desc: 'A centralized digital platform where users can report lost or found items. It replaces inefficient manual logs with a searchable online database, allowing people to securely document, track, and reclaim misplaced belongings through admin verification.',
     tags: ['React', 'TypeScript', 'Tailwind'],
@@ -34,7 +37,7 @@ const PROJECTS = [
   },
   {
     name: 'Gesture Based IDE',
-    art: QrioArt,
+    art: gestureIdeImg,
     featured: false,
     desc: 'Ideal for accessibility, pairing sessions, or keeping hands on hardware while coding.',
     tags: ['Python', 'FastAPI', 'TensorFlow'],
@@ -67,7 +70,11 @@ export default function Projects() {
                 whileHover={{ y: -6 }}
               >
                 <div className="project-art-wrap">
-                  <Art />
+                  {typeof Art === 'string' ? (
+                    <img src={Art} alt={p.name} className="project-art" style={{ objectFit: 'cover' }} />
+                  ) : (
+                    <Art />
+                  )}
                 </div>
 
                 <div className="project-card-body">
