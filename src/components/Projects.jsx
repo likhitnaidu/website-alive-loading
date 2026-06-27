@@ -5,6 +5,7 @@ import { MapNavigatorArt } from './ProjectArt';
 import recylytixImg from '../assets/recylytix_placeholder.png';
 import lostFoundImg from '../assets/lost_found_placeholder.png';
 import gestureIdeImg from '../assets/gesture_ide_placeholder.png';
+import codeImg from '../assets/codebase.png';
 import './Projects.css';
 
 const PROJECTS = [
@@ -18,10 +19,10 @@ const PROJECTS = [
     repo: 'https://github.com/likhitnaidu/recylytix',
   },
   {
-    name: 'Live Map Navigator',
-    art: MapNavigatorArt,
+    name: 'Github repo RAG system',
+    art: codeImg,
     featured: true,
-    desc: 'Real-time navigation frontend with interactive maps, route optimization, and live traffic updates.',
+    desc: 'A RAG system to reverse engineering github repos from link using free nemotron LLM model',
     tags: ['React', 'WebSocket', 'Open Street Maps'],
     link: '#',
     repo: '#',
