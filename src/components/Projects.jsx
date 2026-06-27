@@ -23,7 +23,7 @@ const PROJECTS = [
     art: codeImg,
     featured: true,
     desc: 'A RAG system to reverse engineering github repos from link using free nemotron LLM model',
-    tags: ['React', 'WebSocket', 'Open Street Maps'],
+    tags: ['React', 'FastAPI', 'Open Router'],
     link: '#',
     repo: '#',
   },
